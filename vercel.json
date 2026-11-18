@@ -1,0 +1,9 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://edsols-backend.onrender.com/api/:path*"
+    }
+  ]
+}
