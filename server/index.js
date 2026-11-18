@@ -1,3 +1,4 @@
+
 import 'dotenv/config'
 import express from 'express'
 import mysql from 'mysql2/promise'
@@ -8,16 +9,30 @@ import { fileURLToPath } from 'node:url'
 
 const app = express()
 const port = Number(process.env.PORT || 3001)
+
 const serverDirectory = path.dirname(fileURLToPath(import.meta.url))
 const projectDirectory = path.resolve(serverDirectory, '..')
+
 let pool
 
 app.use(express.json({ limit: '16kb' }))
 
+// Render health check
+app.get('/health', (request, response) => {
+  response.status(200).json({ status: 'ok' })
+})
+
+// Database connection
 function getDatabasePool() {
   if (pool) return pool
 
-  const requiredVariables = ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME']
+  const requiredVariables = [
+    'DB_HOST',
+    'DB_USER',
+    'DB_PASSWORD',
+    'DB_NAME',
+  ]
+
   const missingVariables = requiredVariables.filter(
     (name) => process.env[name] === undefined,
   )
@@ -31,7 +46,12 @@ function getDatabasePool() {
   }
 
   const databasePort = Number(process.env.DB_PORT || 3306)
-  if (!Number.isInteger(databasePort) || databasePort < 1 || databasePort > 65535) {
+
+  if (
+    !Number.isInteger(databasePort) ||
+    databasePort < 1 ||
+    databasePort > 65535
+  ) {
     const error = new Error('DB_PORT must be a valid TCP port.')
     error.code = 'DB_CONFIG_INVALID'
     throw error
@@ -47,20 +67,27 @@ function getDatabasePool() {
     connectionLimit: 10,
     queueLimit: 0,
     charset: 'utf8mb4',
-ssl: {
-  ca: process.env.DB_SSL_CA
-    ? fs.readFileSync(path.resolve(projectDirectory, process.env.DB_SSL_CA))
-    : undefined,
-  rejectUnauthorized: true,
-},
+    ssl: {
+      ca: process.env.DB_SSL_CA
+        ? fs.readFileSync(
+            path.resolve(projectDirectory, process.env.DB_SSL_CA),
+          )
+        : undefined,
+      rejectUnauthorized: true,
+    },
   })
 
   return pool
 }
 
+// Contact form validation
 function validateSubmission(body) {
   if (!body || typeof body !== 'object' || Array.isArray(body)) {
-    return { errors: { form: 'Please submit a valid contact request.' } }
+    return {
+      errors: {
+        form: 'Please submit a valid contact request.',
+      },
+    }
   }
 
   const limits = {
@@ -71,6 +98,7 @@ function validateSubmission(body) {
     company: 200,
     message: 2000,
   }
+
   const values = {}
   const errors = {}
 
@@ -83,6 +111,7 @@ function validateSubmission(body) {
     }
 
     const value = typeof rawValue === 'string' ? rawValue.trim() : ''
+
     if (value.length > maxLength) {
       errors[field] = `This field must be ${maxLength} characters or fewer.`
       continue
@@ -107,6 +136,7 @@ function validateSubmission(body) {
   return { values, errors }
 }
 
+// Contact form API
 app.post('/api/contact', async (request, response) => {
   const { values, errors } = validateSubmission(request.body)
 
@@ -119,6 +149,7 @@ app.post('/api/contact', async (request, response) => {
 
   try {
     const database = getDatabasePool()
+
     await database.execute(
       `INSERT INTO contact_submissions
         (first_name, last_name, work_email, phone_number, company, message)
@@ -142,7 +173,10 @@ app.post('/api/contact', async (request, response) => {
       message: error.message,
     })
 
-    const isConfigurationError = String(error.code || '').startsWith('DB_CONFIG_')
+    const isConfigurationError = String(error.code || '').startsWith(
+      'DB_CONFIG_',
+    )
+
     return response
       .status(isConfigurationError ? 503 : 500)
       .json({
@@ -153,15 +187,20 @@ app.post('/api/contact', async (request, response) => {
   }
 })
 
+// Error handling middleware
 app.use((error, request, response, next) => {
   if (response.headersSent) return next(error)
 
   if (error.type === 'entity.parse.failed') {
-    return response.status(400).json({ message: 'Request body must be valid JSON.' })
+    return response.status(400).json({
+      message: 'Request body must be valid JSON.',
+    })
   }
 
   if (error.type === 'entity.too.large') {
-    return response.status(413).json({ message: 'Request body is too large.' })
+    return response.status(413).json({
+      message: 'Request body is too large.',
+    })
   }
 
   console.error('Request failed:', {
@@ -170,27 +209,18 @@ app.use((error, request, response, next) => {
     code: error.code,
     message: error.message,
   })
-  return response.status(500).json({ message: 'An unexpected server error occurred.' })
+
+  return response.status(500).json({
+    message: 'An unexpected server error occurred.',
+  })
 })
 
-app.use(express.static(path.join(projectDirectory, 'dist')))
-app.use((request, response, next) => {
-  if (request.method !== 'GET' || request.path.startsWith('/api/')) {
-    return next()
-  }
-
-  return response.sendFile(
-    path.join(projectDirectory, 'dist', 'index.html'),
-    (error) => {
-      if (error) next(error)
-    },
-  )
+// Start server for Render
+const server = app.listen(port, '0.0.0.0', () => {
+  console.log(`EDSOLS API listening on http://0.0.0.0:${port}`)
 })
 
-const server = app.listen(port, () => {
-  console.log(`EDSOLS API listening on http://localhost:${port}`)
-})
-
+// Graceful shutdown
 function shutdown() {
   server.close(async () => {
     if (pool) await pool.end()
