@@ -1,0 +1,135 @@
+
+.featured-section {
+  width: 100%;
+  padding: 100px 6%;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(197, 244, 103, 0.09), transparent 35%),
+    #080a08;
+  color: #f4f5f2;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.featured-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-heading {
+  max-width: 650px;
+  margin-bottom: 42px;
+}
+
+.featured-eyebrow {
+  color: #c5f467;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.featured-heading h2 {
+  margin: 14px 0;
+  font-size: clamp(36px, 5vw, 54px);
+  letter-spacing: -2px;
+}
+
+.featured-heading h2 span {
+  color: #c5f467;
+}
+
+.featured-heading p {
+  color: #a1a69c;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.featured-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #292e25;
+  border-radius: 12px;
+  background: #111410;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.featured-card:hover {
+  border-color: #c5f467;
+  transform: translateY(-6px);
+}
+
+.featured-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #191e16;
+}
+
+.featured-image-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featured-card:hover .featured-image-wrap img {
+  transform: scale(1.045);
+}
+
+.featured-card-content {
+  padding: 22px;
+}
+
+.featured-category {
+  color: #c5f467;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.featured-title-row {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.featured-title-row h3 {
+  margin: 0;
+  color: #f4f5f2;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.featured-card-content p {
+  margin: 12px 0 0;
+  color: #a1a69c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-section {
+    padding: 70px 5%;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card-content {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,820 @@
+:root {
+  color-scheme: light;
+}
+
+.app-container,
+.products-page,
+.services-page,
+.founders-page {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.navbar {
+  background: #fff;
+  border-color: var(--border) !important;
+}
+
+.hero-section,
+.products-hero,
+.services-hero {
+  background:
+    radial-gradient(ellipse at 75% 15%, rgba(42, 109, 244, 0.09), transparent 42%),
+    linear-gradient(135deg, #fff 35%, #f2f6ff 100%) !important;
+}
+
+.hero-section :is(h1, h2, h3, h4, h5, h6),
+.affiliations-section :is(h1, h2, h3, h4, h5, h6),
+.mission-section :is(h1, h2, h3, h4, h5, h6),
+.why-section :is(h1, h2, h3, h4, h5, h6),
+.why-grid-section :is(h1, h2, h3, h4, h5, h6),
+.rt-section :is(h1, h2, h3, h4, h5, h6),
+.tech-section :is(h1, h2, h3, h4, h5, h6),
+.featured-section :is(h1, h2, h3, h4, h5, h6),
+.faq-section :is(h1, h2, h3, h4, h5, h6),
+.cta-section :is(h1, h2, h3, h4, h5, h6),
+.footer-section :is(h1, h2, h3, h4, h5, h6),
+.products-page :is(h1, h2, h3, h4, h5, h6),
+.services-page :is(h1, h2, h3, h4, h5, h6),
+.founders-page :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text) !important;
+}
+
+.hero-section p,
+.affiliations-section p,
+.mission-section p,
+.why-section p,
+.why-grid-section p,
+.rt-section p,
+.tech-section p,
+.featured-section p,
+.faq-section p,
+.cta-section p,
+.footer-section p,
+.products-page p,
+.services-page p,
+.founders-page p {
+  color: var(--text-muted) !important;
+}
+
+.nav-cta,
+.primary-button,
+.services-button,
+.founders-button,
+.cta-button,
+.products-cta-button {
+  border-color: var(--brand-blue) !important;
+  background: var(--brand-blue) !important;
+  color: #fff !important;
+}
+
+.secondary-button {
+  border-color: var(--border) !important;
+  background: #fff !important;
+  color: var(--text) !important;
+}
+
+.secondary-button:hover {
+  border-color: var(--brand-blue) !important;
+  color: var(--brand-blue) !important;
+}
+
+.affiliations-section,
+.mission-section,
+.why-section,
+.why-grid-section,
+.rt-section,
+.tech-section,
+.featured-section,
+.faq-section,
+.cta-section,
+.footer-section,
+.products-page,
+.services-page,
+.founders-page {
+  color: var(--text) !important;
+}
+
+.affiliations-section,
+.mission-section,
+.why-section,
+.featured-section,
+.tech-section,
+.products-showcase,
+.services-development-section,
+.services-tech-section,
+.founders-problem-section,
+.founders-roadmap-section {
+  background: #fff !important;
+}
+
+.why-grid-section,
+.rt-section,
+.faq-section,
+.footer-section,
+.products-lifecycle,
+.services-ai-section,
+.services-design-section,
+.founders-profile-section,
+.founders-benefits-section {
+  background: var(--surface) !important;
+}
+
+.cta-section,
+.products-cta,
+.services-cta,
+.founders-cta {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(42, 109, 244, 0.1), transparent 58%),
+    #f2f6ff !important;
+}
+
+.mission-card,
+.mission-featured,
+.mission-secondary,
+.why-card,
+.faq-item,
+.featured-card,
+.tech-panel,
+.tech-tab,
+.tech-item,
+.lifecycle-card,
+.service-card,
+.services-tech-card,
+.founder-profile-card,
+.founders-roadmap-card {
+  border-color: var(--border) !important;
+  background: #fff !important;
+}
+
+.mission-section .mission-featured {
+  border-color: rgba(42, 109, 244, 0.2) !important;
+  background: linear-gradient(140deg, #eef4ff, #fff 72%) !important;
+}
+
+.mission-section .mission-secondary,
+.why-feature {
+  border-color: var(--border) !important;
+  background: linear-gradient(140deg, #f1f5ff, #fff 75%) !important;
+}
+
+.mission-code-visual {
+  background: #1d2738 !important;
+  border-color: rgba(29, 33, 43, 0.12) !important;
+  color: #e7edf7 !important;
+}
+
+.why-card:hover,
+.featured-card:hover,
+.faq-item.open,
+.faq-item:hover,
+.lifecycle-card:hover,
+.service-card:hover,
+.founders-roadmap-card:hover {
+  border-color: rgba(42, 109, 244, 0.5);
+}
+
+.why-feature-top,
+.why-feature-bottom {
+  color: #64748b !important;
+}
+
+.why-option {
+  border-color: var(--border) !important;
+  color: #5e6675 !important;
+}
+
+.why-option:hover,
+.why-option.active {
+  background: rgba(42, 109, 244, 0.07) !important;
+  color: var(--text) !important;
+}
+
+.tech-tab {
+  color: var(--text-muted) !important;
+}
+
+.tech-tab:hover,
+.tech-tab.active {
+  border-color: var(--brand-blue) !important;
+  background: var(--brand-blue) !important;
+  color: #fff !important;
+}
+
+.tech-item {
+  color: var(--text) !important;
+}
+
+.services-tech-list span,
+.founders-capability-tags span {
+  border-color: var(--border) !important;
+  background: #fff !important;
+  color: var(--text-muted) !important;
+}
+
+.services-hero-art .services-art-glow {
+  background: rgba(121, 86, 216, 0.16) !important;
+}
+
+.services-art-core {
+  border-color: rgba(42, 109, 244, 0.3) !important;
+  background: linear-gradient(145deg, rgba(42, 109, 244, 0.12), rgba(121, 86, 216, 0.12)) !important;
+}
+
+.founders-hero h1,
+.founders-hero h2,
+.founders-hero h3,
+.founders-hero h4,
+.founders-hero h5,
+.founders-hero h6,
+.founders-hero-content > p,
+.founders-hero-caption,
+.founders-hero-mark {
+  color: #fff !important;
+}
+
+.founders-hero {
+  background-color: #1d2738;
+}
+
+.founders-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(17, 26, 42, 0.93) 0%, rgba(17, 26, 42, 0.75) 52%, rgba(17, 26, 42, 0.42) 100%),
+    linear-gradient(0deg, #111a2a 0%, transparent 35%) !important;
+}
+
+.founders-hero-mark {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-eyebrow,
+.cta-content h2 span,
+.faq-eyebrow,
+.faq-heading h2 span,
+.footer-column h4,
+.footer-column > a:hover,
+.footer-contact-trigger:hover,
+.footer-bottom a:hover,
+.footer-contact svg,
+.footer-address-link:hover p,
+.footer-linkedin:hover,
+.footer-linkedin svg,
+.featured-eyebrow,
+.featured-heading h2 span,
+.featured-category,
+.featured-title-row svg,
+.tech-eyebrow,
+.tech-heading h2 span,
+.tech-panel-heading svg,
+.tech-dot,
+.products-eyebrow,
+.products-hero h1 span,
+.products-section-heading h2 span,
+.products-cta h2 span,
+.product-number,
+.product-status,
+.services-eyebrow,
+.services-hero h1 span,
+.services-section-heading h2 span,
+.services-design-copy h2 span,
+.services-tech-heading h2 span,
+.services-cta h2 span,
+.services-text-link:hover,
+.services-live-dot,
+.services-art-label-three,
+.services-art-core,
+.services-tech-card-heading,
+.founders-eyebrow,
+.founders-hero h1 span,
+.founders-problem-heading h2 span,
+.founders-section-heading h2 span,
+.founders-profile-info h3 span,
+.founders-benefits-heading h2 span,
+.founders-cta h2 span,
+.founders-profile-divider,
+.mission-label,
+.mission-header h2 span,
+.mission-icon,
+.mission-section .mission-featured-top,
+.mission-section .mission-secondary-top svg,
+.mission-section .mission-brain-visual,
+.mission-section .mission-code-visual .code-highlight,
+.mission-section .mission-tech-tags span,
+.mission-section .mission-intro h2 span,
+.why-eyebrow,
+.why-heading h2 span,
+.why-grid-section .why-heading h2 span,
+.why-left h2 span,
+.why-icon,
+.why-grid-section .why-card-icon,
+.why-arrow,
+.why-option-number,
+.why-option svg,
+.why-feature-content h4,
+.why-feature-icon,
+.why-feature-symbol,
+.why-orbit-inner {
+  color: var(--brand-blue) !important;
+}
+
+.mission-section .mission-icon,
+.why-icon,
+.why-grid-section .why-card-icon,
+.service-icon-wrap,
+.founders-roadmap-icon,
+.founders-benefit-icon {
+  border-color: rgba(42, 109, 244, 0.2) !important;
+  background: rgba(42, 109, 244, 0.08) !important;
+}
+
+.mission-section .mission-tech-tags span {
+  border-color: rgba(42, 109, 244, 0.2) !important;
+  background: rgba(42, 109, 244, 0.08) !important;
+}
+
+.mission-section .mission-orbit,
+.why-feature .why-orbit,
+.why-feature .why-orbit::before,
+.why-feature .why-orbit::after {
+  border-color: rgba(42, 109, 244, 0.28) !important;
+}
+
+.mission-section .mission-brain-visual {
+  filter: drop-shadow(0 0 25px rgba(42, 109, 244, 0.22)) !important;
+}
+
+.why-feature .why-feature-icon {
+  filter: drop-shadow(0 0 18px rgba(42, 109, 244, 0.25)) !important;
+}
+
+.why-feature .why-orbit-inner,
+.products-page .status-dot {
+  box-shadow: 0 0 16px rgba(42, 109, 244, 0.35) !important;
+}
+
+.products-page .product-info li::before,
+.products-page .status-dot,
+.products-page .lifecycle-number,
+.tech-section .tech-dot {
+  background: var(--brand-blue) !important;
+}
+
+.products-page .lifecycle-number {
+  color: #fff !important;
+}
+
+.featured-section .featured-image-wrap {
+  background: #f2f5fa !important;
+}
+
+.services-live-dot,
+.services-orbit-outer::before {
+  box-shadow: 0 0 14px rgba(42, 109, 244, 0.35) !important;
+}
+
+.services-orbit-inner::after {
+  box-shadow: 0 0 18px rgba(121, 86, 216, 0.35) !important;
+}
+
+.services-art-core {
+  box-shadow: 0 0 50px rgba(121, 86, 216, 0.14), inset 0 0 24px rgba(42, 109, 244, 0.08) !important;
+}
+
+.founders-mark-line {
+  background: rgba(42, 109, 244, 0.7) !important;
+}
+
+.mission-section .mission-secondary-top {
+  color: var(--text-muted) !important;
+}
+
+.services-orbit-inner {
+  border-color: rgba(121, 86, 216, 0.3) !important;
+}
+
+.rt-section .rt-content h2,
+.rt-section .rt-stage:hover,
+.rt-section .rt-stage.active {
+  color: var(--text) !important;
+}
+
+.rt-stage {
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+.rt-stage:hover,
+.rt-stage.active {
+  background: rgba(42, 109, 244, 0.06) !important;
+}
+
+.rt-stage.active {
+  border-left-color: var(--brand-blue) !important;
+}
+
+.faq-question {
+  color: var(--text) !important;
+}
+
+.faq-question svg {
+  color: var(--brand-blue) !important;
+}
+
+.rt-eyebrow {
+  border-color: rgba(42, 109, 244, 0.3) !important;
+  background: rgba(42, 109, 244, 0.06) !important;
+}
+
+.footer-column > a,
+.footer-contact-trigger,
+.footer-contact {
+  color: var(--text-muted) !important;
+}
+
+.footer-bottom {
+  border-color: var(--border) !important;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  color: #687386 !important;
+}
+
+.product-image {
+  border-color: var(--border) !important;
+  background: var(--surface) !important;
+}
+
+.service-card {
+  background: #fff !important;
+}
+
+.service-card:hover {
+  background: #f7f9ff !important;
+}
+
+.contact-dialog::before {
+  background: linear-gradient(90deg, #2a6df4, #5b7df8, #7956d8);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+.navbar {
+  background: #070707 !important;
+}
+
+.hero-section,
+.products-hero,
+.services-hero {
+  background:
+    radial-gradient(ellipse at 75% 15%, rgba(255, 255, 255, 0.08), transparent 44%),
+    linear-gradient(135deg, #000000 35%, #101010 100%) !important;
+}
+
+.nav-cta,
+.primary-button,
+.services-button,
+.founders-button,
+.cta-button,
+.products-cta-button,
+.tech-tab.active,
+.tech-tab:hover,
+.contact-submit-button {
+  color: #000 !important;
+}
+
+.secondary-button {
+  border-color: var(--border) !important;
+  background: #101010 !important;
+  color: var(--text) !important;
+}
+
+.secondary-button:hover {
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+
+.affiliations-section,
+.mission-section,
+.why-section,
+.featured-section,
+.tech-section,
+.products-showcase,
+.services-development-section,
+.services-tech-section,
+.founders-problem-section,
+.founders-roadmap-section {
+  background: #080808 !important;
+}
+
+.why-grid-section,
+.rt-section,
+.faq-section,
+.footer-section,
+.products-lifecycle,
+.services-ai-section,
+.services-design-section,
+.founders-profile-section,
+.founders-benefits-section {
+  background: #0c0c0c !important;
+}
+
+.cta-section,
+.products-cta,
+.services-cta,
+.founders-cta {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(255, 255, 255, 0.1), transparent 58%),
+    #070707 !important;
+}
+
+.mission-card,
+.mission-featured,
+.mission-secondary,
+.why-card,
+.faq-item,
+.featured-card,
+.tech-panel,
+.tech-tab,
+.tech-item,
+.lifecycle-card,
+.service-card,
+.services-tech-card,
+.founder-profile-card,
+.founders-roadmap-card {
+  border-color: var(--border) !important;
+  background: #101010 !important;
+}
+
+.mission-section .mission-featured {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  background: linear-gradient(140deg, #1d1d1d, #101010 72%) !important;
+}
+
+.mission-section .mission-secondary,
+.why-feature {
+  border-color: var(--border) !important;
+  background: linear-gradient(140deg, #171717, #101010 75%) !important;
+}
+
+.mission-code-visual {
+  background: #080808 !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #eeeeee !important;
+}
+
+.why-card:hover,
+.featured-card:hover,
+.faq-item.open,
+.faq-item:hover,
+.lifecycle-card:hover,
+.service-card:hover,
+.founders-roadmap-card:hover {
+  border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.why-feature-top,
+.why-feature-bottom {
+  color: #b3b3b3 !important;
+}
+
+.why-option {
+  border-color: var(--border) !important;
+  color: #b3b3b3 !important;
+}
+
+.why-option:hover,
+.why-option.active,
+.rt-stage:hover,
+.rt-stage.active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+.tech-tab {
+  border-color: var(--border) !important;
+  background: #101010 !important;
+  color: var(--text-muted) !important;
+}
+
+.tech-tab:hover,
+.tech-tab.active {
+  border-color: var(--brand-blue) !important;
+  background: var(--brand-blue) !important;
+  color: #000 !important;
+}
+
+.tech-item,
+.services-tech-list span,
+.founders-capability-tags span {
+  border-color: var(--border) !important;
+  background: #151515 !important;
+  color: var(--text) !important;
+}
+
+.services-hero-art .services-art-glow {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.services-art-core {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08)) !important;
+  box-shadow: 0 0 70px rgba(255, 255, 255, 0.12), inset 0 0 32px rgba(255, 255, 255, 0.08) !important;
+}
+
+.founders-hero {
+  background-color: #070707 !important;
+}
+
+.founders-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.8) 52%, rgba(0, 0, 0, 0.5) 100%),
+    linear-gradient(0deg, #000000 0%, transparent 35%) !important;
+}
+
+.mission-section .mission-icon,
+.why-icon,
+.why-grid-section .why-card-icon,
+.service-icon-wrap,
+.founders-roadmap-icon,
+.founders-benefit-icon,
+.mission-section .mission-tech-tags span {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.mission-section .mission-orbit,
+.why-feature .why-orbit,
+.why-feature .why-orbit::before,
+.why-feature .why-orbit::after {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+.mission-section .mission-brain-visual,
+.why-feature .why-feature-icon {
+  filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.18)) !important;
+}
+
+.why-feature .why-orbit-inner,
+.products-page .status-dot {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.25) !important;
+}
+
+.products-page .product-info li::before,
+.products-page .status-dot,
+.products-page .lifecycle-number,
+.tech-section .tech-dot {
+  background: var(--brand-blue) !important;
+}
+
+.products-page .lifecycle-number {
+  color: #000 !important;
+}
+
+.featured-section .featured-image-wrap {
+  background: #0b0b0b !important;
+}
+
+.services-live-dot,
+.services-orbit-outer::before {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.25) !important;
+}
+
+.services-orbit-inner::after {
+  background: #fff !important;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.2) !important;
+}
+
+.services-orbit-inner {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+.founders-mark-line {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.rt-eyebrow {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.rt-stage {
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+.rt-stage.active {
+  border-left-color: var(--brand-blue) !important;
+}
+
+.faq-question {
+  color: #fff !important;
+}
+
+.faq-question svg {
+  color: #fff !important;
+}
+
+.footer-column > a,
+.footer-contact-trigger,
+.footer-contact {
+  color: var(--text-muted) !important;
+}
+
+.footer-bottom {
+  border-color: var(--border) !important;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  color: #999 !important;
+}
+
+.product-image {
+  border-color: var(--border) !important;
+  background: #101010 !important;
+}
+
+.service-card {
+  background: #101010 !important;
+}
+
+.service-card:hover {
+  background: #1b1b1b !important;
+}
+
+.rt-dashboard,
+.rt-dashboard :is(h1, h2, h3, h4, h5, h6) {
+  color: #202020 !important;
+}
+
+.rt-dashboard p {
+  color: #737373 !important;
+}
+
+.rt-sidebar svg:first-child {
+  color: #202431 !important;
+}
+
+.contact-dialog::before {
+  background: linear-gradient(90deg, #444, #888, #fff) !important;
+}
+
+.contact-field b {
+  color: #ccc !important;
+}
+
+.contact-consent {
+  color: #b3b3b3 !important;
+}
+
+.contact-backdrop {
+  background: rgba(0, 0, 0, 0.84) !important;
+}
+
+.contact-dialog {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: #101010 !important;
+  color: #fff !important;
+}
+
+.contact-dialog-header {
+  background: linear-gradient(115deg, #171717, #333 62%, #555) !important;
+}
+
+.contact-field {
+  color: #eee !important;
+}
+
+.contact-field input,
+.contact-field textarea {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: #080808 !important;
+  color: #fff !important;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: #fff !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.16) !important;
+}
+
+.contact-cancel-button {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: #151515 !important;
+  color: #fff !important;
+}
+
+.contact-cancel-button:hover:not(:disabled) {
+  background: #252525 !important;
+}
+
+.contact-submit-button {
+  background: var(--brand-blue) !important;
+}
+
+.contact-submit-button:hover:not(:disabled) {
+  background: #ccc !important;
+}

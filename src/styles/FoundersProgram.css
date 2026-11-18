@@ -1,0 +1,503 @@
+.founders-page {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--obsidian);
+  color: var(--soft-ivory);
+}
+
+.founders-page section {
+  box-sizing: border-box;
+}
+
+.founders-eyebrow {
+  display: inline-block;
+  color: var(--acid-lime);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.founders-hero {
+  position: relative;
+  min-height: 640px;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 75% 15%, rgba(128, 85, 255, 0.2), transparent 44%),
+    #090a0d;
+}
+
+.founders-hero-video,
+.founders-hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.founders-hero-video {
+  object-fit: cover;
+  opacity: 0.28;
+}
+
+.founders-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(9, 10, 13, 0.97) 0%, rgba(9, 10, 13, 0.79) 52%, rgba(9, 10, 13, 0.46) 100%),
+    linear-gradient(0deg, #090a0d 0%, transparent 35%);
+}
+
+.founders-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+.founders-hero h1 {
+  margin: 22px 0;
+  font-size: clamp(48px, 6.5vw, 88px);
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+}
+
+.founders-hero h1 span,
+.founders-problem-heading h2 span,
+.founders-section-heading h2 span,
+.founders-profile-info h3 span,
+.founders-benefits-heading h2 span,
+.founders-cta h2 span {
+  display: block;
+  color: var(--acid-lime);
+}
+
+.founders-hero-content > p {
+  max-width: 680px;
+  color: #d0d2cc;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.founders-button {
+  min-height: 52px;
+  margin-top: 30px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid var(--acid-lime);
+  border-radius: 4px;
+  background: var(--acid-lime);
+  color: var(--obsidian);
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.founders-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(182, 243, 74, 0.18);
+}
+
+.founders-hero-caption {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 38px;
+  color: #a6aaa1;
+  font-size: 12px;
+}
+
+.founders-caption-line {
+  width: 28px;
+  height: 1px;
+  background: var(--acid-lime);
+}
+
+.founders-hero-mark {
+  position: absolute;
+  right: 8%;
+  bottom: 12%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(244, 243, 239, 0.54);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.founders-mark-line {
+  width: 50px;
+  height: 1px;
+  background: rgba(182, 243, 74, 0.7);
+}
+
+.founders-problem-section {
+  padding: 105px 8%;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(182, 243, 74, 0.05), transparent 42%),
+    #0d0f0c;
+}
+
+.founders-problem-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 10%;
+}
+
+.founders-problem-heading h2,
+.founders-section-heading h2,
+.founders-benefits-heading h2,
+.founders-cta h2 {
+  margin-top: 17px;
+  font-size: clamp(38px, 4.5vw, 59px);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.founders-problem-copy > p,
+.founders-section-heading > p,
+.founders-benefits-heading > p,
+.founders-cta > p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.founders-problem-copy > p {
+  font-size: 16px;
+}
+
+.founders-capability-tags {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.founders-capability-tags span {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: #c3c6be;
+  font-size: 11px;
+}
+
+.founders-profile-section {
+  padding: 105px 8%;
+  background: #090b09;
+}
+
+.founders-section-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.founders-section-heading > p {
+  max-width: 590px;
+  margin: 17px auto 0;
+}
+
+.founder-profile-card {
+  max-width: 1000px;
+  min-height: 390px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(128, 85, 255, 0.09), transparent 48%),
+    #11130f;
+}
+
+.founder-profile-photo {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  background: #e8e7e4;
+}
+
+.founder-profile-photo::after {
+  position: absolute;
+  inset: 45% 0 0;
+  content: "";
+  background: linear-gradient(0deg, rgba(8, 10, 8, 0.75), transparent);
+  pointer-events: none;
+}
+
+.founder-profile-photo img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.founder-photo-label {
+  position: absolute;
+  z-index: 1;
+  left: 24px;
+  bottom: 21px;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.founder-profile-info {
+  padding: 54px 58px;
+  align-self: center;
+}
+
+.founder-profile-info h3 {
+  margin: 18px 0 13px;
+  font-size: clamp(30px, 3.5vw, 42px);
+  letter-spacing: -0.05em;
+}
+
+.founder-profile-info > p {
+  max-width: 480px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.founder-profile-divider {
+  width: 54px;
+  height: 2px;
+  margin: 28px 0 18px;
+  display: block;
+  background: var(--acid-lime);
+}
+
+.founder-profile-signoff {
+  color: #c5c8bf;
+  font-family: var(--heading);
+  font-size: 15px;
+}
+
+.founders-roadmap-section {
+  padding: 105px 8%;
+  background: #10120f;
+}
+
+.founders-roadmap-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.founders-roadmap-card {
+  min-height: 220px;
+  padding: 25px 22px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.founders-roadmap-card:hover {
+  border-color: rgba(182, 243, 74, 0.55);
+  transform: translateY(-4px);
+}
+
+.founders-roadmap-icon,
+.founders-benefit-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(182, 243, 74, 0.22);
+  border-radius: 7px;
+  background: rgba(182, 243, 74, 0.07);
+  color: var(--acid-lime);
+}
+
+.founders-roadmap-card h3 {
+  margin: 23px 0 10px;
+  font-size: 20px;
+}
+
+.founders-roadmap-card p,
+.founders-benefit p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.founders-benefits-section {
+  padding: 105px 8%;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(128, 85, 255, 0.08), transparent 42%),
+    #090b09;
+}
+
+.founders-benefits-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 9%;
+}
+
+.founders-benefits-heading > p {
+  margin-top: 17px;
+}
+
+.founders-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px 22px;
+}
+
+.founders-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.founders-benefit-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+}
+
+.founders-benefit h3 {
+  margin: 2px 0 7px;
+  font-size: 16px;
+}
+
+.founders-cta {
+  padding: 110px 8%;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(182, 243, 74, 0.12), transparent 55%),
+    #0d0f0c;
+}
+
+.founders-cta h2 {
+  max-width: 750px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.founders-cta > p {
+  max-width: 640px;
+  margin: 18px auto 0;
+}
+
+@media (max-width: 950px) {
+  .founders-hero {
+    min-height: 570px;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .founders-problem-section,
+  .founders-profile-section,
+  .founders-roadmap-section,
+  .founders-benefits-section {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .founders-roadmap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .founders-benefits-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 650px) {
+  .founders-hero {
+    min-height: 620px;
+    padding: 80px 6%;
+    align-items: flex-start;
+  }
+
+  .founders-hero-video {
+    object-position: center;
+  }
+
+  .founders-hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(9, 10, 13, 0.92), rgba(9, 10, 13, 0.65)),
+      linear-gradient(0deg, #090a0d 0%, transparent 55%);
+  }
+
+  .founders-hero h1 {
+    font-size: clamp(45px, 12vw, 68px);
+  }
+
+  .founders-hero-content > p {
+    font-size: 15px;
+  }
+
+  .founders-hero-mark {
+    right: 6%;
+    bottom: 7%;
+  }
+
+  .founders-problem-section,
+  .founders-profile-section,
+  .founders-roadmap-section,
+  .founders-benefits-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .founders-problem-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .founders-section-heading {
+    margin-bottom: 34px;
+  }
+
+  .founder-profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-profile-photo {
+    min-height: 360px;
+    max-height: 450px;
+  }
+
+  .founder-profile-info {
+    padding: 35px 28px 40px;
+  }
+
+  .founders-roadmap-grid,
+  .founders-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .founders-roadmap-card {
+    min-height: auto;
+  }
+
+  .founders-cta {
+    padding: 85px 6%;
+  }
+}
