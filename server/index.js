@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import mysql from 'mysql2/promise'
 import path from 'node:path'
+import fs from 'node:fs'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
@@ -46,6 +47,12 @@ function getDatabasePool() {
     connectionLimit: 10,
     queueLimit: 0,
     charset: 'utf8mb4',
+ssl: {
+  ca: process.env.DB_SSL_CA
+    ? fs.readFileSync(path.resolve(projectDirectory, process.env.DB_SSL_CA))
+    : undefined,
+  rejectUnauthorized: true,
+},
   })
 
   return pool
