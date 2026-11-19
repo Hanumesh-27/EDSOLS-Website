@@ -6,6 +6,7 @@ import { useContactForm } from './useContactForm'
 
 function Navbar() {
   const { openContactForm } = useContactForm()
+
   const links = [
     { name: 'Home', href: '/' },
     { name: 'Our Products', href: '/products' },
@@ -28,10 +29,12 @@ function Navbar() {
       </Link>
 
       <nav aria-label="Main navigation">
-        <ul className="nav-links">
+        <ul id="mobile-navigation" className="nav-links">
           {links.map((link) => (
             <li key={link.name}>
-              <Link to={link.href}>{link.name}</Link>
+              <Link to={link.href}>
+                {link.name}
+              </Link>
             </li>
           ))}
         </ul>
@@ -58,4 +61,3 @@ function Navbar() {
 }
 
 export default Navbar
-  
