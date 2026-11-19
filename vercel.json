@@ -4,6 +4,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://edsols-backend.onrender.com/api/:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ]
 }

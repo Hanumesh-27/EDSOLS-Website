@@ -76,7 +76,21 @@ function ContactModal({ onClose }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      const result = await response.json()
+      const responseText = await response.text()
+      let result = {}
+
+      if (responseText) {
+        try {
+          result = JSON.parse(responseText)
+        } catch {
+          if (!response.ok) {
+            throw new Error(
+              'The contact service is temporarily unavailable. Please try again later.',
+            )
+          }
+          throw new Error('The contact service returned an unexpected response.')
+        }
+      }
 
       if (!response.ok) {
         throw new Error(result.message || 'We could not submit your request.')
